@@ -5,14 +5,25 @@ import Skill from "./skill/Skill";
 
 const Skills = () => {
 
+    let skills = [
+        {title: "JS", description: "trterttr"},
+        {title: "CSS", description: "CSS CSSCSSCSSCSSCSS"},
+        {title: "React", description: "ReactReactReactReactReactReact"}
+    ]
+
     return (
         <div className={style.skillsBlock}>
             <div className={`${styleContainer.container} ${style.skillsContainer} `}>
                 <h2 className={style.title}>Skills</h2>
                 <div className={style.skills}>
-                    <Skill title={"JS"} description={"JSJSJSJSJSJSJSJSJSJSJSJS"}/>
-                    <Skill title={"CSS"} description={"CSSCSSCSSCSSCSS CSSCSSCSSCSSCSS"}/>
-                    <Skill title={"React"} description={"ReactReactReactReactReactReact"}/>
+                    {
+                        skills.map(s =>
+                            <Skill
+                                title={s.title}
+                                description={s.description}
+                            />
+                        )
+                    }
                 </div>
             </div>
         </div>
