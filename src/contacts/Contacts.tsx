@@ -8,9 +8,9 @@ const Contacts = () => {
             <div className={`${styleContainer.container} ${style.contactsContainer}`}>
                 <h2 className={style.title}>Contacts</h2>
                 <form className={style.form}>
-                    <input value={"<input>"}/>
-                    <input value={"<input>"}/>
-                    <textarea value={"<textarea>"}/>
+                    <input value={"<input>"} onChange={() => {}}/>
+                    <input value={"<input>"} onChange={() => {}}/>
+                    <textarea value={"<textarea>"} onChange={() => {}}/>
                 </form>
                 <button>Send</button>
             </div>

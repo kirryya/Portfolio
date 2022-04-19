@@ -6,8 +6,14 @@ import Project from "./project/Project";
 const Projects = () => {
 
     let projects = [
-        {title: "Todolist", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consequuntur distinctio eaque magni modi odio odit porro, quas saepe vitae?"},
-        {title: "Social Network", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consequuntur distinctio eaque magni modi odio odit porro, quas saepe vitae?"}
+        {
+            title: "Todolist",
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consequuntur distinctio eaque magni modi odio odit porro, quas saepe vitae?"
+        },
+        {
+            title: "Social Network",
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consequuntur distinctio eaque magni modi odio odit porro, quas saepe vitae?"
+        }
     ]
 
     return (
@@ -16,10 +22,10 @@ const Projects = () => {
                 <h2 className={style.title}>Projects</h2>
                 <div className={style.projects}>
                     {
-                        projects.map(project =>
-                            <Project
-                                title={project.title}
-                                description={project.description}
+                        projects.map((project, index) =>
+                            <Project key={index}
+                                     title={project.title}
+                                     description={project.description}
                             />
                         )
                     }

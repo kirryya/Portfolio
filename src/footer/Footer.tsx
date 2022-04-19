@@ -1,6 +1,6 @@
 import React from 'react';
 import Links from "./links/Links";
-import styleContainer from "../contacts/Contacts.module.css";
+import styleContainer from "../common/styles/Container.module.css";
 import style from "./Footer.module.css";
 
 const Footer = () => {
