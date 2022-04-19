@@ -6,9 +6,9 @@ import Skill from "./skill/Skill";
 const Skills = () => {
 
     let skills = [
-        {title: "JS", description: "trterttr"},
-        {title: "CSS", description: "CSS CSSCSSCSSCSSCSS"},
-        {title: "React", description: "ReactReactReactReactReactReact"}
+        {title: "JS", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consequuntur distinctio eaque magni modi odio odit porro, quas saepe vitae?"},
+        {title: "CSS", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consequuntur distinctio eaque magni modi odio odit porro, quas saepe vitae?"},
+        {title: "React", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consequuntur distinctio eaque magni modi odio odit porro, quas saepe vitae?"}
     ]
 
     return (
@@ -17,10 +17,10 @@ const Skills = () => {
                 <h2 className={style.title}>Skills</h2>
                 <div className={style.skills}>
                     {
-                        skills.map(s =>
+                        skills.map(skill =>
                             <Skill
-                                title={s.title}
-                                description={s.description}
+                                title={skill.title}
+                                description={skill.description}
                             />
                         )
                     }

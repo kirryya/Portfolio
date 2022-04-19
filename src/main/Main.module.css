@@ -1,5 +1,5 @@
 .mainBlock {
-height: 100vh;
+    height: 100vh;
     background-color: cadetblue;
 }
 
@@ -8,7 +8,7 @@ height: 100vh;
     background-color: white;
 }
 
-.photo{
+.photo {
     width: 300px;
     height: 400px;
     background-color: white;

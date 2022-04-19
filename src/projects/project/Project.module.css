@@ -1,0 +1,22 @@
+.project {
+    width: 200px;
+    background-color: darkgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.picture {
+    height: 200px;
+    width: 200px;
+    background-color: darkred;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.button {
+    width: 100px;
+    margin: 0 auto;
+}
