@@ -14,11 +14,12 @@
 
 .addForm {
     height: 180px;
-    width: 400px;
+    width: 280px;
     border: 1px solid;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-sizing: border-box;
 }
 
 .button {
@@ -35,4 +36,5 @@
     flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
+    box-sizing: border-box;
 }

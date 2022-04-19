@@ -1,9 +1,9 @@
 .footerBlock {
-    height: 50vh;
+    height: 25vh;
     background-color: lightslategrey;
 }
 
 .footersContainer {
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
 }
