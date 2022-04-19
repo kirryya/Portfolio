@@ -1,22 +1,38 @@
 .contactsBlock {
-   height: 50vh;
-   background-color: goldenrod;
+    height: 50vh;
+    background-color: goldenrod;
 }
 
 .contactsContainer {
-   flex-direction: column;
-   justify-content: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .title {
-   background-color: indianred;
+    background-color: indianred;
+}
+
+.addForm {
+    height: 180px;
+    width: 400px;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.button {
+    height: 40px;
+    width: 80px;
+    margin: 0 auto;
 }
 
 .form {
-   border: 1px solid;
-   width: 50%;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   flex-wrap: wrap;
+    border: 1px solid;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }

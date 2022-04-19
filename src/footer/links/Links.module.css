@@ -1,6 +1,13 @@
 .links {
     border: 1px solid;
     width: 400px;
-    height: 50px;
-
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
 }
+
+.image {
+    height: 100%;
+    width: 30px;
+}
+
