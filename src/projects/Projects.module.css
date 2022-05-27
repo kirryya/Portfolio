@@ -1,6 +1,6 @@
 .projectsBlock {
     min-height: 100vh;
-    background-color: burlywood;
+    background-color: #ebe9eb;
 }
 
 .projectsContainer {
@@ -9,7 +9,17 @@
 }
 
 .title {
-    background-color: indianred;
+    font-family: 'DM Sans', sans-serif;
+    margin: 1rem;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #000000;
+    position: relative;
+}
+
+.title h2 {
+    margin: 0;
 }
 
 .projects {
