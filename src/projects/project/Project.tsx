@@ -12,8 +12,10 @@ const Project = (props: SkillPropsType) => {
             <div className={style.picture}>
                 <button className={style.button}>View</button>
             </div>
-            <h3 className={style.title}>{props.title}</h3>
-            <span className={style.description}>{props.description}</span>
+            <div className={style.projectInfo}>
+                <h3 className={style.title}>{props.title}</h3>
+                <span className={style.description}>{props.description}</span>
+            </div>
         </div>
     );
 };

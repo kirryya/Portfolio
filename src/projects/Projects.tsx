@@ -2,6 +2,7 @@ import React from 'react';
 import style from "./Projects.module.css"
 import styleContainer from "../common/styles/Container.module.css"
 import Project from "./project/Project";
+import Title from "../common/components/title/Title";
 
 const Projects = () => {
 
@@ -13,15 +14,17 @@ const Projects = () => {
         {
             title: "Social Network",
             description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consequuntur distinctio eaque magni modi odio odit porro, quas saepe vitae?"
+        },
+        {
+            title: "Cards",
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consequuntur distinctio "
         }
     ]
 
     return (
         <div className={style.projectsBlock}>
             <div className={`${styleContainer.container} ${style.projectsContainer} `}>
-                <div className={style.title}>
-                    <h2>Projects</h2>
-                </div>
+               <Title title={"Projects"}/>
                 <div className={style.projects}>
                     {
                         projects.map((project, index) =>
