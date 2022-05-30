@@ -10,15 +10,18 @@
 .picture {
     height: 200px;
     width: 200px;
-    background-color: darkred;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .button {
     width: 100px;
     margin: 0 auto;
+    background-color: #abb8c3;
 }
 
 .projectInfo {

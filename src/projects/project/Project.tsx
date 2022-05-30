@@ -4,12 +4,15 @@ import style from "./Project.module.css"
 export type SkillPropsType = {
     title: string
     description: string
+    style: {
+        backgroundImage: string
+    }
 }
 
 const Project = (props: SkillPropsType) => {
     return (
         <div className={style.project}>
-            <div className={style.picture}>
+            <div className={style.picture} style={props.style}>
                 <button className={style.button}>View</button>
             </div>
             <div className={style.projectInfo}>
