@@ -1,0 +1,17 @@
+@import "variables";
+
+@mixin text( $fontFamily, $lineHeight, $fontWeight, $fontSize ) {
+  font-family: $fontFamily;
+  line-height: $lineHeight;
+  font-weight: $fontWeight;
+  font-size: $fontSize;
+  color: $textColor;
+}
+
+@mixin button( $width, $fontFamily, $fontSize ) {
+  width: $width;
+  background: $bgColor;
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  color: $textColor;
+}

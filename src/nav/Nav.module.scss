@@ -1,7 +1,9 @@
+@import "src/common/styles/sass/variables.scss";
+
 .nav {
    border: 1px solid;
    width: 300px;
    display: flex;
    justify-content: space-between;
-   background-color: white;
+   background-color: $bgSecondColor;
 }
