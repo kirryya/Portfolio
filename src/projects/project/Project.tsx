@@ -1,5 +1,5 @@
 import React from 'react';
-import style from "./Project.module.css"
+import style from "./Project.module.scss"
 
 export type SkillPropsType = {
     title: string

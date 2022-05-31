@@ -1,0 +1,20 @@
+@import "src/common/styles/sass/variables";
+
+.projectsBlock {
+  min-height: 100vh;
+  background-color: $bgSecondColor;
+
+  .projectsContainer {
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .projects {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      box-sizing: border-box;
+      align-items: flex-start;
+    }
+  }
+}
