@@ -8,22 +8,7 @@
     justify-content: flex-start;
 }
 
-.title {
-    font-family: 'DM Sans', sans-serif;
-    margin: 1rem;
-    font-size: 34px;
-    font-weight: 700;
-    line-height: 1.2;
-    color: #000000;
-    position: relative;
-}
-
-.title h2 {
-    margin: 0;
-}
-
 .projects {
-    border: 1px solid;
     width: 100%;
     display: flex;
     justify-content: space-around;
