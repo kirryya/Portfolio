@@ -1,0 +1,13 @@
+@import "src/common/styles/sass/mixins";
+
+.footerBlock {
+    height: 20vh;
+    background-color: rgba(3,1,1,0.78);
+    .footersContainer {
+        @include text(('DM Sans', sans-serif), 1.2, 400, 16px);
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+}
+
+

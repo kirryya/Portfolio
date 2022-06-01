@@ -1,9 +1,0 @@
-.footerBlock {
-    height: 20vh;
-    background-color: rgba(3,1,1,0.78);
-}
-
-.footersContainer {
-    flex-direction: column;
-    justify-content: flex-start;
-}
