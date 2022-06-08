@@ -1,13 +1,14 @@
 .links {
-    border: 1px solid;
+   /* border: 1px solid;*/
     width: 280px;
     height: 30px;
     display: flex;
     justify-content: space-around;
+    .image {
+        height: 100%;
+        width: 30px;
+    }
 }
 
-.image {
-    height: 100%;
-    width: 30px;
-}
+
 

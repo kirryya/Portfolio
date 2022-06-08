@@ -1,6 +1,6 @@
 import React from 'react';
 import Links from "./links/Links";
-import styleContainer from "../common/styles/Container.module.css";
+import styleContainer from "../common/styles/Container.module.scss";
 import style from "./Footer.module.scss";
 
 const Footer = () => {
@@ -9,7 +9,7 @@ const Footer = () => {
             <div className={`${styleContainer.container} ${style.footersContainer}`}>
                 <h3>Andrei Kirylchyk</h3>
                 <Links/>
-                <span>© 2022 All rights reserved.</span>
+                <span className={style.copyright}>© 2022 All rights reserved.</span>
             </div>
         </div>
     );
