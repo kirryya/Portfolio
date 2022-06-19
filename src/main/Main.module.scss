@@ -7,12 +7,18 @@
 
   .text {
     width: 400px;
+    .description {
+      @include text(('DM Sans', sans-serif), 1.8, 400, 12px);
+    }
   }
 
   .photo {
     width: 300px;
     height: 400px;
-    background-color: white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15px;
   }
 }
 
