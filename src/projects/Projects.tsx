@@ -31,7 +31,7 @@ const Projects = () => {
             style: social
         },
         {
-            title: "Cards",
+            title: "Learning Cards",
             description: "SPA for learning by cards. It's team project. Implemented: login page with validation; register page with validation; reset password page with validation; 404 page; profile page with abilities to: edit your profile information (change nickname), add a new card pack and edit, search, sort, view, remove and learn your card packs; packs list page with abilities to: sort, view and learn any card packs; learn page with abilities to answer a question and evaluate your answer.",
             style: cards
         }

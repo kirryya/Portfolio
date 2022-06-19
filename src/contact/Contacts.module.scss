@@ -5,6 +5,9 @@
 .contactsBlock {
   height: 50vh;
   background-color: $bgThirdColor;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
 
   .contactsContainer {
     flex-direction: column;
@@ -13,14 +16,12 @@
     .addForm {
       height: 180px;
       width: 280px;
-     /* border: 1px solid;*/
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       box-sizing: border-box;
 
       .form {
-        /*border: 1px solid;*/
         width: 100%;
         height: 100px;
         display: flex;

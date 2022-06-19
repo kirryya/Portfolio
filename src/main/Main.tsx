@@ -2,15 +2,19 @@ import React from 'react';
 import style from "./Main.module.scss"
 import styleContainer from "../common/styles/Container.module.scss"
 import avaImage from "../assets/image/Avatar.png";
+import fontImage from "../assets/image/font.jpg";
 
 const Main = () => {
 
     const avatar = {
         backgroundImage: `url(${avaImage})`
     }
+    const font = {
+        backgroundImage: `url(${fontImage})`
+    }
 
     return (
-        <div className={style.mainBlock}>
+        <div className={style.mainBlock} style={font}>
             <div className={styleContainer.container}>
                 <div className={style.text}>
                     <span>Hi There</span>
