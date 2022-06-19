@@ -8,6 +8,9 @@ import tsImage from "../assets/image/typescript.png";
 import cssImage from "../assets/image/CSS3.png";
 import reactImage from "../assets/image/react.png";
 import reduxImage from "../assets/image/redux.jpg";
+import gitImage from "../assets/image/Git.png";
+import axiosImage from "../assets/image/axios.png";
+import muiImage from "../assets/image/Mui.png";
 
 const Skills = () => {
 
@@ -26,33 +29,49 @@ const Skills = () => {
     const typescript = {
         backgroundImage: `url(${tsImage})`
     }
+    const git = {
+        backgroundImage: `url(${gitImage})`
+    }
+    const axios = {
+        backgroundImage: `url(${axiosImage})`
+    }
+    const mui = {
+        backgroundImage: `url(${muiImage})`
+    }
 
     let skills = [
         {
             title: "JavaScript",
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consequuntur distinctio eaque magni modi odio odit porro, quas saepe vitae?",
             style: javascript
         },
         {
             title: "TypeScript",
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consequuntur distinctio eaque magni modi odio odit porro, quas saepe vitae?",
             style: typescript
         },
         {
             title: "React",
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consequuntur distinctio eaque magni modi odio odit porro, quas saepe vitae?",
             style: react
         },
         {
             title: "Redux",
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consequuntur distinctio eaque magni modi odio odit porro, quas saepe vitae?",
             style: redux
         },
         {
             title: "CSS",
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consequuntur distinctio eaque magni modi odio odit porro, quas saepe vitae?",
             style: css
-        }
+        },
+        {
+            title: "Git",
+            style: git
+        },
+        {
+            title: "Axios",
+            style: axios
+        },
+        {
+            title: "MaterialUI",
+            style: mui
+        },
     ]
 
     return (
@@ -64,7 +83,7 @@ const Skills = () => {
                         skills.map((skill, index) =>
                             <Skill key={index}
                                    title={skill.title}
-                                   description={skill.description}
+                                 /*  description={skill.description}*/
                                    style={skill.style}
                             />
                         )
