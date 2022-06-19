@@ -83,7 +83,6 @@ const Skills = () => {
                         skills.map((skill, index) =>
                             <Skill key={index}
                                    title={skill.title}
-                                 /*  description={skill.description}*/
                                    style={skill.style}
                             />
                         )

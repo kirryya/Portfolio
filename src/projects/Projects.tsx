@@ -22,17 +22,17 @@ const Projects = () => {
     let projects = [
         {
             title: "Todolist",
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consequuntur distinctio eaque magni modi odio odit porro, quas saepe vitae?",
+            description: "SPA for task management. Implemented: add task or task list, remove task or task list, rename task or task list, marking the completed task",
             style: todolist
         },
         {
             title: "Social Network",
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consequuntur distinctio eaque magni modi odio odit porro, quas saepe vitae?",
+            description: "SPA for social actions - messaging and blogging. Implemented: login page with validation, error displaying and captcha; 404 page; profile page with abilities to: view the information of the selected user, edit your profile information, change avatar, add a new post and view your published posts; dialogs page with the ability to send a message; users page and friends page with abilities to: view the list of users using pagination, subscribe and unsubscribe to any user, view any user profile.",
             style: social
         },
         {
             title: "Cards",
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consequuntur distinctio ",
+            description: "SPA for learning by cards. It's team project. Implemented: login page with validation; register page with validation; reset password page with validation; 404 page; profile page with abilities to: edit your profile information (change nickname), add a new card pack and edit, search, sort, view, remove and learn your card packs; packs list page with abilities to: sort, view and learn any card packs; learn page with abilities to answer a question and evaluate your answer.",
             style: cards
         }
     ]
