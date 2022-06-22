@@ -8,7 +8,7 @@
 
   .footersContainer {
     @include text(('DM Sans', sans-serif), 1.2, 400, 16px);
-    color: $bgSecondColor;
+    color: white;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
