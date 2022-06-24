@@ -15,7 +15,7 @@ const Main = () => {
     }
 
     return (
-        <div className={style.mainBlock} style={font}>
+        <div className={style.mainBlock} style={font} id={"main"}>
             <div className={styleContainer.container}>
                 <div className={style.text}>
                     <span>Hi There</span>

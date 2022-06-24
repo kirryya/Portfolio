@@ -11,7 +11,7 @@ const Contact = () => {
     }
 
     return (
-        <div className={style.contactsBlock} style={font}>
+        <div className={style.contactsBlock} style={font} id={"contact"}>
             <div className={`${styleContainer.container} ${style.contactsContainer}`}>
                 <Title title={"Contact"}/>
                 <div className={style.addForm}>

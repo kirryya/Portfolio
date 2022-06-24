@@ -2,11 +2,10 @@
 @import "src/common/styles/sass/mixins";
 
 .nav {
-   /*border: 1px solid;*/
-   width: 350px;
-   display: flex;
-   justify-content: space-between;
-   /*background-color: $bgSecondColor;*/
-   @include text(('DM Sans', sans-serif), 1.2, 400, 18px);
-   color: white ;
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+  /*background-color: $bgSecondColor;*/
+  @include text(('DM Sans', sans-serif), 1.2, 400, 18px);
+  color: white;
 }
