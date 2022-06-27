@@ -18,8 +18,37 @@
   }
 
   .photo {
-    width: 300px;
-    height: 400px;
+
+    width: 400px;
+    height: 550px;
+    @media screen and (max-height: 750px) {
+      height: 380px;
+      width: 290px;
+    }
+    @media screen and (max-height: 720px) {
+      height: 360px;
+      width: 280px;
+    }
+    @media screen and (max-height: 700px) {
+      height: 340px;
+      width: 270px;
+    }
+    @media screen and (max-height: 700px) {
+      height: 320px;
+      width: 260px;
+    }
+    @media screen and (max-height: 670px) {
+      height: 300px;
+      width: 250px;
+    }
+    @media screen and (max-height: 640px) {
+      height: 280px;
+      width: 230px;
+    }
+    @media screen and (max-height: 620px) {
+      height: 260px;
+      width: 210px;
+    }
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

@@ -4,6 +4,15 @@
 
 .contactsBlock {
   height: 50vh;
+  @media screen and (min-width: 1700px) {
+    height: 35vh;
+  }
+  @media screen and (max-height: 637px) {
+    height: 52vh;
+  }
+  @media screen and (max-height: 612px) {
+    height: 55vh;
+  }
   background-color: $bgThirdColor;
   background-size: cover;
   background-position: center;
