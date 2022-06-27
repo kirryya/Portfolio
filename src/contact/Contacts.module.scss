@@ -5,7 +5,7 @@
 .contactsBlock {
   height: 50vh;
   @media screen and (min-width: 1700px) {
-    height: 35vh;
+    height: 40vh;
   }
   @media screen and (max-height: 637px) {
     height: 52vh;
@@ -14,10 +14,7 @@
     height: 55vh;
   }
   background-color: $bgThirdColor;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
+  @include fontImage;
 
   .contactsContainer {
     flex-direction: column;
@@ -43,7 +40,7 @@
 
       .button {
         margin: 0 90px 40px;
-        @include button(100px, ('DM Sans', sans-serif), 14px);
+        @include button(100px, 30px,('DM Sans', sans-serif), 14px);
 
         &:hover {
           background: $bgSecondColor;

@@ -6,6 +6,9 @@ import Title from '../common/components/title/Title';
 import todoImage from '../assets/image/todolist.jpg';
 import socialImage from '../assets/image/social.jpg';
 import cardsImage from '../assets/image/cards.jpg';
+import Particles from "react-tsparticles";
+import type {Engine} from "tsparticles-engine";
+import { loadSnowPreset } from "tsparticles-preset-snow"
 
 const Projects = () => {
 
@@ -37,8 +40,18 @@ const Projects = () => {
         }
     ]
 
+    const customInit = (async (engine: Engine) => {
+        await loadSnowPreset(engine);
+    });
+
+
+    const options = {
+        preset: "snow",
+    };
+
     return (
         <div className={style.projectsBlock} id={"projects"}>
+            {/*<Particles options={options} init={customInit} className={style.particles}/>*/}
             <div className={`${styleContainer.container} ${style.projectsContainer} `}>
                 <Title title={"Projects"}/>
                 <div className={style.projects}>

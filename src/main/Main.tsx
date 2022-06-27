@@ -3,7 +3,6 @@ import style from "./Main.module.scss"
 import styleContainer from "../common/styles/Container.module.scss"
 import avaImage from "../assets/image/Avatar.png";
 import fontImage from "../assets/image/font_main.jpg";
-import Particles from "react-particles-js";
 
 const Main = () => {
 

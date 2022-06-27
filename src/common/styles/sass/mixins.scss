@@ -8,10 +8,20 @@
   color: $textColor;
 }
 
-@mixin button( $width, $fontFamily, $fontSize ) {
+@mixin button( $width, $height, $fontFamily, $fontSize ) {
   width: $width;
+  height: $height;
   background: $bgColor;
   font-family: $fontFamily;
   font-size: $fontSize;
   color: $textColor;
+  border-radius: 10px;
+
+}
+
+@mixin fontImage (){
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
 }

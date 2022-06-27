@@ -16,10 +16,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
+    @include fontImage;
     border-radius: 15px 15px 0 0;
 
     &::before {
@@ -34,7 +31,8 @@
     }
 
     .button {
-      @include button(100px, ('DM Sans', sans-serif), 14px);
+      @include button(120px, 40px, ('DM Sans', sans-serif), 18px);
+      font-weight: bold;
       margin: 0 auto;
       position: relative;
       z-index: 1;

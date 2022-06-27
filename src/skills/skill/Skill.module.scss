@@ -15,9 +15,7 @@
     .icon {
         height: 90px;
         width: 90px;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+        @include fontImage;
 
     }
     .title {
