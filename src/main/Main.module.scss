@@ -17,8 +17,8 @@
 
   .photo {
 
-    width: 400px;
-    height: 530px;
+    width: 370px;
+    height: 510px;
     @media screen and (max-height: 750px) {
       height: 380px;
       width: 290px;
@@ -46,6 +46,10 @@
     @media screen and (max-height: 620px) {
       height: 260px;
       width: 210px;
+    }
+    @media screen and (max-height: 600px) {
+      height: 240px;
+      width: 200px;
     }
     background-size: cover;
     background-position: center;
