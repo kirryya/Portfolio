@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.a7f597d4.css",
-    "main.js": "/Portfolio/static/js/main.9e35cc5c.js",
+    "main.css": "/Portfolio/static/css/main.66c0ecaa.css",
+    "main.js": "/Portfolio/static/js/main.e33ccf42.js",
     "static/js/787.d7104e35.chunk.js": "/Portfolio/static/js/787.d7104e35.chunk.js",
     "static/media/Avatar.png": "/Portfolio/static/media/Avatar.84a054a3e842bc321b48.png",
-    "static/media/font.jpg": "/Portfolio/static/media/font.9209d015805050bbd8e4.jpg",
     "static/media/react.png": "/Portfolio/static/media/react.20dc8a0694ec5bd97e9f.png",
     "static/media/social.jpg": "/Portfolio/static/media/social.0103a0be055ce82f7534.jpg",
     "static/media/CSS3.png": "/Portfolio/static/media/CSS3.19c8605d6b2861f5fbe0.png",
+    "static/media/font_main.jpg": "/Portfolio/static/media/font_main.7e45d66bcdf1b9c71873.jpg",
     "static/media/instagram.png": "/Portfolio/static/media/instagram.eabb84b9ec51170f5df7.png",
     "static/media/redux.jpg": "/Portfolio/static/media/redux.0003ae67039c629ee288.jpg",
     "static/media/todolist.jpg": "/Portfolio/static/media/todolist.d925afd6e570fda9333e.jpg",
@@ -17,12 +17,12 @@
     "static/media/github.png": "/Portfolio/static/media/github.076a73873cf5e68cbf0b.png",
     "static/media/typescript.png": "/Portfolio/static/media/typescript.29073194eeda5803e7f3.png",
     "index.html": "/Portfolio/index.html",
-    "main.a7f597d4.css.map": "/Portfolio/static/css/main.a7f597d4.css.map",
-    "main.9e35cc5c.js.map": "/Portfolio/static/js/main.9e35cc5c.js.map",
+    "main.66c0ecaa.css.map": "/Portfolio/static/css/main.66c0ecaa.css.map",
+    "main.e33ccf42.js.map": "/Portfolio/static/js/main.e33ccf42.js.map",
     "787.d7104e35.chunk.js.map": "/Portfolio/static/js/787.d7104e35.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a7f597d4.css",
-    "static/js/main.9e35cc5c.js"
+    "static/css/main.66c0ecaa.css",
+    "static/js/main.e33ccf42.js"
   ]
 }
