@@ -4,6 +4,7 @@
   height: 100vh;
   background-color: #abb8c3;
   @include text(('DM Sans', sans-serif), 1.2, 400, 18px);
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
