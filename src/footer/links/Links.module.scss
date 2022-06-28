@@ -1,13 +1,18 @@
 .links {
-   /* border: 1px solid;*/
-    width: 280px;
-    height: 30px;
-    display: flex;
-    justify-content: space-around;
-    .image {
-        height: 100%;
-        width: 30px;
+  width: 280px;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+
+  .image {
+    height: 95%;
+    width: 30px;
+    cursor: pointer;
+    &:hover {
+      height: 105%;
+      width: 34px;
     }
+  }
 }
 
 

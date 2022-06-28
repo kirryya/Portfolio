@@ -9,6 +9,7 @@
   align-items: center;
   text-align: center;
   border-radius: 15px;
+  box-shadow: 15px 10px 10px rgba(0, 0, 0, .5);
 
   .picture {
     height: 250px;
@@ -19,6 +20,7 @@
     @include fontImage;
     border-radius: 15px 15px 0 0;
 
+
     &::before {
       position: absolute;
       content: '';
@@ -27,7 +29,13 @@
       bottom: 0;
       left: 0;
       right: 0;
-      opacity: 0.3;
+      opacity: 0.1;
+      border-radius: 15px 15px 0 0;
+
+      &:hover {
+        opacity: 0;
+      }
+
     }
 
     .button {
@@ -36,13 +44,16 @@
       margin: 0 auto;
       position: relative;
       z-index: 1;
+      cursor: pointer;
 
       &:hover {
         background: $bgSecondColor;
+        color: $bgColor
       }
 
       &:active {
         background: $bgColor;
+        color: $textColor
       }
     }
   }

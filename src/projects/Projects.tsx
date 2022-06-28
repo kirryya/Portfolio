@@ -41,9 +41,9 @@ const Projects = () => {
 
     return (
         <div className={style.projectsBlock} id={"projects"}>
-            <Fade bottom>
-                <div className={`${styleContainer.container} ${style.projectsContainer} `}>
-                    <Title title={"Projects"}/>
+            <div className={`${styleContainer.container} ${style.projectsContainer} `}>
+                <Title title={"Projects"}/>
+                <Fade bottom>
                     <div className={style.projects}>
                         {
                             projects.map((project, index) =>
@@ -55,8 +55,8 @@ const Projects = () => {
                             )
                         }
                     </div>
-                </div>
-            </Fade>
+                </Fade>
+            </div>
         </div>
     );
 };

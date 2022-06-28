@@ -12,10 +12,14 @@
     box-sizing: border-box;
     border-radius: 15px;
     margin-bottom: 70px;
+    box-shadow: 15px 10px 10px rgba(0, 0, 0, .5);
     .icon {
         height: 90px;
         width: 90px;
         @include fontImage;
+        &:hover {
+            transform: scale(1.4, 1.4);
+        }
 
     }
     .title {

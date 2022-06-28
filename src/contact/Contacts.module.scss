@@ -36,18 +36,53 @@
         justify-content: space-between;
         flex-wrap: wrap;
         box-sizing: border-box;
+
+        .nameForm {
+          border-radius: 10px;
+          height: 19px;
+          background-color: $bgColor;
+          border-color: $textColor;
+          color: $textColor;
+          outline: 0;
+          border-width: 1.5px;
+        }
+
+        .emailForm {
+          border-radius: 10px;
+          height: 19px;
+          background-color: $bgColor;
+          border-color: $textColor;
+          color: $textColor;
+          outline: none;
+          border-width: 1.5px;
+          padding: 3px;
+        }
+
+        .messageForm {
+          border-radius: 10px;
+          height: 38px;
+          background-color: $bgColor;
+          border-color: $textColor;
+          color: $textColor;
+          outline: 0;
+          border-width: 1.5px;
+        }
+
       }
 
       .button {
         margin: 0 90px 40px;
-        @include button(100px, 30px,('DM Sans', sans-serif), 14px);
+        @include button(100px, 30px, ('DM Sans', sans-serif), 14px);
+        cursor: pointer;
 
         &:hover {
           background: $bgSecondColor;
+          color: $bgColor
         }
 
         &:active {
           background: $bgColor;
+          color: $textColor
         }
       }
     }
