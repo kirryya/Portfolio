@@ -23,17 +23,20 @@ const Projects = () => {
         {
             title: "Todolist",
             description: "SPA for task management. Implemented: add task or task list, remove task or task list, rename task or task list, marking the completed task",
-            style: todolist
+            style: todolist,
+            link: "https://github.com/kirryya/ToDoList"
         },
         {
             title: "Social Network",
             description: "SPA for social actions - messaging and blogging. Implemented: login page with validation, error displaying and captcha; 404 page; profile page with abilities to: view the information of the selected user, edit your profile information, change avatar, add a new post and view your published posts; dialogs page with the ability to send a message; users page and friends page with abilities to: view the list of users using pagination, subscribe and unsubscribe to any user, view any user profile.",
-            style: social
+            style: social,
+            link: "https://github.com/kirryya/Social-Network"
         },
         {
             title: "Learning Cards",
             description: "SPA for learning by cards. It's team project. Implemented: login page with validation; register page with validation; reset password page with validation; 404 page; profile page with abilities to: edit your profile information (change nickname), add a new card pack and edit, search, sort, view, remove and learn your card packs; packs list page with abilities to: sort, view and learn any card packs; learn page with abilities to answer a question and evaluate your answer.",
-            style: cards
+            style: cards,
+            link: "https://github.com/mr-Freeman-S/cards-nya"
         }
     ]
 
@@ -51,6 +54,7 @@ const Projects = () => {
                                          title={project.title}
                                          description={project.description}
                                          style={project.style}
+                                         link={project.link ? project.link : ""}
                                 />
                             )
                         }
