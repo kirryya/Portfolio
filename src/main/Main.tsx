@@ -13,18 +13,23 @@ const Main = () => {
         backgroundImage: `url(${fontImage})`
     }
 
+    const Fade = require("react-reveal/Fade");
+
     return (
         <div className={style.mainBlock} style={font} id={"main"}>
             <div className={styleContainer.container}>
-                <div className={style.text}>
-                    <span>Hi There</span>
-                    <h1>I am Andrei Kirylchyk</h1>
-                    <p>Front-End Developer </p>
-                    <span className={style.description}>I'm a result oriented front-end developer with experience in creating SPA, using React(JS/TS), Redux, HTML & CSS. Now I am improving my skills in this direction and expanding them with new technologies. And also I have interest to learn React Native</span>
-                </div>
-                <div className={style.photo} style={avatar}>
-
-                </div>
+                <Fade left>
+                    <div className={style.text}>
+                        <span>Hi There</span>
+                        <h1>I am Andrei Kirylchyk</h1>
+                        <p>Front-End Developer </p>
+                        <span className={style.description}>I'm a result oriented front-end developer with experience in creating SPA, using React(JS/TS), Redux, HTML & CSS. Now I am improving my skills in this direction and expanding them with new technologies. And also I have interest to learn React Native</span>
+                    </div>
+                </Fade>
+                <Fade right>
+                    <div className={style.photo} style={avatar}>
+                    </div>
+                </Fade>
             </div>
         </div>
     );

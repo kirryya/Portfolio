@@ -74,21 +74,25 @@ const Skills = () => {
         },
     ]
 
+    const Fade = require("react-reveal/Fade");
+
     return (
         <div className={style.skillsBlock} id={"skills"}>
-            <div className={`${styleContainer.container} ${style.skillsContainer} `}>
-                <Title title={"Skills"}/>
-                <div className={style.skills}>
-                    {
-                        skills.map((skill, index) =>
-                            <Skill key={index}
-                                   title={skill.title}
-                                   style={skill.style}
-                            />
-                        )
-                    }
+            <Fade bottom>
+                <div className={`${styleContainer.container} ${style.skillsContainer} `}>
+                    <Title title={"Skills"}/>
+                    <div className={style.skills}>
+                        {
+                            skills.map((skill, index) =>
+                                <Skill key={index}
+                                       title={skill.title}
+                                       style={skill.style}
+                                />
+                            )
+                        }
+                    </div>
                 </div>
-            </div>
+            </Fade>
         </div>
     );
 };

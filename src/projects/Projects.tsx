@@ -6,9 +6,6 @@ import Title from '../common/components/title/Title';
 import todoImage from '../assets/image/todolist.jpg';
 import socialImage from '../assets/image/social.jpg';
 import cardsImage from '../assets/image/cards.jpg';
-import Particles from "react-tsparticles";
-import type {Engine} from "tsparticles-engine";
-import { loadSnowPreset } from "tsparticles-preset-snow"
 
 const Projects = () => {
 
@@ -40,32 +37,26 @@ const Projects = () => {
         }
     ]
 
-    const customInit = (async (engine: Engine) => {
-        await loadSnowPreset(engine);
-    });
-
-
-    const options = {
-        preset: "snow",
-    };
+    const Fade = require("react-reveal/Fade");
 
     return (
         <div className={style.projectsBlock} id={"projects"}>
-            {/*<Particles options={options} init={customInit} className={style.particles}/>*/}
-            <div className={`${styleContainer.container} ${style.projectsContainer} `}>
-                <Title title={"Projects"}/>
-                <div className={style.projects}>
-                    {
-                        projects.map((project, index) =>
-                            <Project key={index}
-                                     title={project.title}
-                                     description={project.description}
-                                     style={project.style}
-                            />
-                        )
-                    }
+            <Fade bottom>
+                <div className={`${styleContainer.container} ${style.projectsContainer} `}>
+                    <Title title={"Projects"}/>
+                    <div className={style.projects}>
+                        {
+                            projects.map((project, index) =>
+                                <Project key={index}
+                                         title={project.title}
+                                         description={project.description}
+                                         style={project.style}
+                                />
+                            )
+                        }
+                    </div>
                 </div>
-            </div>
+            </Fade>
         </div>
     );
 };

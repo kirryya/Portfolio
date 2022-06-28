@@ -10,19 +10,26 @@ const Contact = () => {
         backgroundImage: `url(${fontImage})`
     }
 
+    const Fade = require("react-reveal/Fade");
+
     return (
         <div className={style.contactsBlock} style={font} id={"contact"}>
-            <div className={`${styleContainer.container} ${style.contactsContainer}`}>
-                <Title title={"Contact"}/>
-                <div className={style.addForm}>
-                    <form className={style.form}>
-                        <input value={"Your name"} onChange={() => {}}/>
-                        <input value={"Your email"} onChange={() => {}}/>
-                        <textarea value={"Your message"} onChange={() => {}}/>
-                    </form>
-                    <button className={style.button}>Send</button>
+            <Fade right>
+                <div className={`${styleContainer.container} ${style.contactsContainer}`}>
+                    <Title title={"Contact"}/>
+                    <div className={style.addForm}>
+                        <form className={style.form}>
+                            <input value={"Your name"} onChange={() => {
+                            }}/>
+                            <input value={"Your email"} onChange={() => {
+                            }}/>
+                            <textarea value={"Your message"} onChange={() => {
+                            }}/>
+                        </form>
+                        <button className={style.button}>Send</button>
+                    </div>
                 </div>
-            </div>
+            </Fade>
         </div>
     );
 };
