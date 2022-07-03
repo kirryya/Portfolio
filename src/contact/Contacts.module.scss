@@ -13,6 +13,15 @@
   @media screen and (max-height: 612px) {
     height: 55vh;
   }
+  @media screen and (max-height: 580px) {
+    height: 60vh;
+  }
+  @media screen and (max-height: 531px) {
+    height: 70vh;
+  }
+  @media screen and (max-height: 456px) {
+    height: 80vh;
+  }
   background-color: $bgThirdColor;
   @include fontImage;
 
