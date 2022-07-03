@@ -5,8 +5,7 @@ type TitlePropsType = {
     title: string
 }
 
-
-const Title = (props: TitlePropsType) => {
+export const Title = (props: TitlePropsType) => {
 
     return (
         <div className={style.title}>
@@ -14,8 +13,6 @@ const Title = (props: TitlePropsType) => {
         </div>
     );
 };
-
-export default Title;
 
 
 

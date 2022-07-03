@@ -1,13 +1,13 @@
 @import "src/common/styles/sass/variables";
 
 .header {
-    height: 40px;
-    width: 100%;
-    background-color: $bgThirdColor;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    z-index: 1000;
-    top: 0;
+  height: 40px;
+  width: 100%;
+  background-color: $bgThirdColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
 }

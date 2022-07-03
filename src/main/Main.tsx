@@ -6,7 +6,7 @@ import fontImage from "../assets/image/font_main.jpg";
 import ReactTypingEffect from "react-typing-effect"
 import Tilt from "react-parallax-tilt"
 
-const Main = () => {
+export const Main = () => {
 
     const avatar = {
         backgroundImage: `url(${avaImage})`
@@ -38,5 +38,3 @@ const Main = () => {
         </div>
     );
 };
-
-export default Main;

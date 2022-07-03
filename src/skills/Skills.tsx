@@ -1,8 +1,8 @@
 import React from 'react';
 import style from "./Skills.module.scss"
 import styleContainer from "../common/styles/Container.module.scss"
-import Skill from "./skill/Skill";
-import Title from "../common/components/title/Title";
+import {Skill} from "./skill/Skill";
+import {Title} from "../common/components/title/Title";
 import jsImage from "../assets/image/JavaScript.png";
 import tsImage from "../assets/image/typescript.png";
 import cssImage from "../assets/image/CSS3.png";
@@ -12,7 +12,7 @@ import gitImage from "../assets/image/Git.png";
 import axiosImage from "../assets/image/axios.png";
 import muiImage from "../assets/image/Mui.png";
 
-const Skills = () => {
+export const Skills = () => {
 
     const javascript = {
         backgroundImage: `url(${jsImage})`
@@ -96,5 +96,3 @@ const Skills = () => {
         </div>
     );
 };
-
-export default Skills;

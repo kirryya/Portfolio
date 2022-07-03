@@ -10,7 +10,7 @@ export type SkillPropsType = {
     }
 }
 
-const Project = (props: SkillPropsType) => {
+export const Project = (props: SkillPropsType) => {
     return (
         <div className={style.project}>
             <div className={style.picture} style={props.style}>
@@ -23,5 +23,3 @@ const Project = (props: SkillPropsType) => {
         </div>
     );
 };
-
-export default Project;

@@ -1,13 +1,12 @@
 import React from 'react';
 import style from "./Nav.module.scss"
 
-const Nav = () => {
+export const Nav = () => {
 
     const onClickHandler = (id: string) => {
-        // @ts-ignore
-        document.getElementById(id).scrollIntoView({block: "start", behavior: 'smooth'})
+        const element = document.getElementById(id)
+        element?.scrollIntoView({block: "start", behavior: 'smooth'})
     }
-
 
     return (
         <div className={style.nav}>
@@ -18,5 +17,3 @@ const Nav = () => {
         </div>
     );
 };
-
-export default Nav;

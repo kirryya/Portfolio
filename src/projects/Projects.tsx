@@ -1,13 +1,13 @@
 import React from 'react';
 import style from './Projects.module.scss'
 import styleContainer from '../common/styles/Container.module.scss'
-import Project from './project/Project';
-import Title from '../common/components/title/Title';
+import {Project} from './project/Project';
+import {Title} from '../common/components/title/Title';
 import todoImage from '../assets/image/todolist.jpg';
 import socialImage from '../assets/image/social.jpg';
 import cardsImage from '../assets/image/cards.jpg';
 
-const Projects = () => {
+export const Projects = () => {
 
     const todolist = {
         backgroundImage: `url(${todoImage})`,
@@ -64,8 +64,6 @@ const Projects = () => {
         </div>
     );
 };
-
-export default Projects;
 
 
 

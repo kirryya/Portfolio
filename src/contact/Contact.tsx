@@ -1,10 +1,10 @@
 import React from 'react';
 import style from "./Contacts.module.scss";
 import styleContainer from "../common/styles/Container.module.scss";
-import Title from "../common/components/title/Title";
+import {Title} from "../common/components/title/Title";
 import fontImage from "../assets/image/font_main.jpg";
 
-const Contact = () => {
+export const Contact = () => {
 
     const font = {
         backgroundImage: `url(${fontImage})`
@@ -30,5 +30,3 @@ const Contact = () => {
         </div>
     );
 };
-
-export default Contact;

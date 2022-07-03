@@ -1,9 +1,9 @@
 import React from 'react';
-import Links from "./links/Links";
+import {Links} from "./links/Links";
 import styleContainer from "../common/styles/Container.module.scss";
 import style from "./Footer.module.scss";
 
-const Footer = () => {
+export const Footer = () => {
     return (
         <div className={style.footerBlock}>
             <div className={`${styleContainer.container} ${style.footersContainer}`}>
@@ -14,5 +14,3 @@ const Footer = () => {
         </div>
     );
 };
-
-export default Footer;
