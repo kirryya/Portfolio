@@ -4,6 +4,9 @@
   height: 100vh;
   background-color: #abb8c3;
   @include text(('DM Sans', sans-serif), 1.2, 400, 18px);
+  @media screen and (max-height: 600px) {
+    @include text(('DM Sans', sans-serif), 1.2, 400, 12px);
+  }
   @include fontImage;
   margin-top: 40px;
   padding-bottom: 30px;
@@ -13,6 +16,9 @@
 
     .description {
       @include text(('DM Sans', sans-serif), 1.8, 400, 12px);
+      @media screen and (max-height: 600px) {
+        @include text(('DM Sans', sans-serif), 1.4, 400, 8px);
+      }
     }
   }
 
