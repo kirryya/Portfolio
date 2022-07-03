@@ -19,9 +19,9 @@ const Contact = () => {
                     <Title title={"Contact"}/>
                     <div className={style.addForm}>
                         <form className={style.form}>
-                            <input value={"Your name"} className={style.nameForm} onChange={() => {}}/>
-                            <input value={"Your email"} className={style.emailForm} onChange={() => {}}/>
-                            <textarea value={"Your message"} className={style.messageForm} onChange={() => {}}/>
+                            <input placeholder={"Your name"} className={style.nameForm} onChange={() => {}}/>
+                            <input placeholder={"Your email"} className={style.emailForm} onChange={() => {}}/>
+                            <textarea placeholder={"Your message"} className={style.messageForm} onChange={() => {}}/>
                         </form>
                         <button className={style.button}>Send</button>
                     </div>

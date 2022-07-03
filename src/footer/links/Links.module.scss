@@ -7,10 +7,11 @@
   .image {
     height: 95%;
     width: 30px;
+    /*object-fit: cover;*/
+    transition: 0.2s;
     cursor: pointer;
     &:hover {
-      height: 110%;
-      width: 40px;
+     transform: scale(1.4);
     }
   }
 }
