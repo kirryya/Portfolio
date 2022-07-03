@@ -8,6 +8,12 @@
   @media screen and (min-width: 1700px) {
     height: 16vh;
   }
+  @media screen and (max-height: 596px) {
+    height: 25vh;
+  }
+  @media screen and (max-height: 477px) {
+    height: 30vh;
+  }
 
   .footersContainer {
     @include text(('DM Sans', sans-serif), 1.2, 400, 16px);
