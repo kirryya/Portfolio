@@ -1,4 +1,4 @@
-import React, {ChangeEvent, useState} from 'react';
+import React, {ChangeEvent, useEffect, useState} from 'react';
 import style from "./Contacts.module.scss";
 import styleContainer from "../common/styles/Container.module.scss";
 import {Title} from "../common/components/title/Title";
@@ -17,6 +17,12 @@ export const Contact = () => {
     const [email, setEmail] = useState<string>("")
     const [message, setMessage] = useState<string>("")
     const [send, setSend] = useState<string | null>(null)
+
+    useEffect(() => {
+        setTimeout(() => {
+            setSend(null)
+        }, 3000)
+    }, [send])
 
     const onChangeNameHandler = (e: ChangeEvent<HTMLInputElement>) => {
         setYourName(e.currentTarget.value)
@@ -37,21 +43,14 @@ export const Contact = () => {
         formAPI.sendMessage(dataForm)
             .then(() => {
                 setSend("Message send")
-                setTimeout(() => {
-                    setSend(null)
-                }, 3000)
             })
-            .catch((error) => {
+            .catch(() => {
                 setSend("Not send")
-                setTimeout(() => {
-                    setSend(null)
-                }, 3000)
             })
 
         setYourName("")
         setMessage("")
         setEmail("")
-
     }
 
     return (
@@ -59,6 +58,7 @@ export const Contact = () => {
             <Fade right>
                 <div className={`${styleContainer.container} ${style.contactsContainer}`}>
                     <Title title={"Contact"}/>
+
                     <div className={style.addForm}>
                         <form className={style.form} id={"contact-form"}>
                             <input placeholder={"Your name"} value={yourName} className={style.nameForm}
@@ -68,10 +68,9 @@ export const Contact = () => {
                             <textarea placeholder={"Your message"} value={message} className={style.messageForm}
                                       onChange={onChangeMessageHandler}>{message}</textarea>
                         </form>
-                        {send ?
-                            <div className={style.message}>
-                                {send}
-                            </div>
+
+                        {send
+                            ? <div className={style.message}>{send}</div>
                             : <button className={style.button} onClick={onClickSendHandler}>Send</button>}
                     </div>
                 </div>
