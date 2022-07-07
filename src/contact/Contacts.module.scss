@@ -85,6 +85,7 @@
         align-items: center;
         @include text(('DM Sans', sans-serif), 1.2, 400, 18px);
         color: $bgSecondColor;
+        margin-bottom: 15px;
       }
 
       .button {
@@ -102,6 +103,13 @@
           color: $textColor
         }
       }
+    }
+    .messageSending {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include text(('DM Sans', sans-serif), 1.2, 700, 24px);
+      color: $bgSecondColor;
     }
   }
 }
