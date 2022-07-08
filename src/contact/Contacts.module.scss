@@ -55,6 +55,15 @@
           outline: 0;
           border-width: 1.5px;
         }
+        .nameFormError {
+          border-radius: 10px;
+          height: 19px;
+          background-color: rgba(218, 113, 116, 0.78);
+          border-color: rgba(217, 48, 164, 0.9);
+          color: $bgColor;
+          outline: 0;
+          border-width: 1.5px;
+        }
 
         .emailForm {
           border-radius: 10px;
@@ -66,6 +75,17 @@
           border-width: 1.5px;
           padding: 3px;
         }
+        .emailFormError {
+          border-radius: 10px;
+          height: 19px;
+          background-color: rgba(172,5,8,0.78);
+          border-color: rgba(109,5,8,0.9);
+          color: $textColor;
+          outline: none;
+          border-width: 1.5px;
+          padding: 3px;
+        }
+
 
         .messageForm {
           border-radius: 10px;

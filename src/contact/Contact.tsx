@@ -1,4 +1,4 @@
-import React, {ChangeEvent, useEffect, useState} from 'react';
+import React, {ChangeEvent, useEffect, useState, FocusEvent} from 'react';
 import style from "./Contacts.module.scss";
 import styleContainer from "../common/styles/Container.module.scss";
 import {Title} from "../common/components/title/Title";
@@ -18,6 +18,11 @@ export const Contact = () => {
     const [message, setMessage] = useState<string>("")
     const [send, setSend] = useState<string | null>(null)
     const [loading, setLoading] = useState<boolean>(false)
+    const [yourNameError, setYourNameError] = useState<boolean>(false)
+    const [emailError, setEmailError] = useState<boolean>(false)
+    const [messageError, setMessageError] = useState<boolean>(false)
+    const [disabled, setDisabled] = useState<boolean>(true)
+
 
     useEffect(() => {
         const timeOut = setTimeout(() => {
@@ -32,13 +37,32 @@ export const Contact = () => {
 
     const onChangeNameHandler = (e: ChangeEvent<HTMLInputElement>) => {
         setYourName(e.currentTarget.value)
+        if (e.currentTarget.value.length < 2) {
+            setYourNameError(true)
+        } else {
+            setYourNameError(false)
+            setDisabled(false)
+        }
     }
+
+    const onBlurNameHandler = (e: FocusEvent<HTMLInputElement>) => {
+        if (!e.currentTarget.value.length || e.currentTarget.value.length < 2) {
+            setYourNameError(true)
+        } else {
+            setYourName(e.currentTarget.value)
+            setYourNameError(false)
+            setDisabled(false)
+        }
+    }
+
+
     const onChangeEmailHandler = (e: ChangeEvent<HTMLInputElement>) => {
         setEmail(e.currentTarget.value)
     }
     const onChangeMessageHandler = (e: ChangeEvent<HTMLTextAreaElement>) => {
         setMessage(e.currentTarget.value)
     }
+
 
     const onClickSendHandler = () => {
         setLoading(true)
@@ -57,7 +81,7 @@ export const Contact = () => {
             })
             .catch(() => {
                 setLoading(false)
-                setSend("Message is NOT SEND")
+                setSend("Message NOT SEND")
             })
     }
 
@@ -70,16 +94,21 @@ export const Contact = () => {
                         ? <div className={style.messageSending}>SENDING...</div>
                         : <div className={style.addForm}>
                             <form className={style.form} id={"contact-form"}>
-                                <input placeholder={"Your name"} value={yourName} className={style.nameForm}
-                                       onChange={onChangeNameHandler}/>
-                                <input placeholder={"Your email"} value={email} className={style.emailForm}
-                                       onChange={onChangeEmailHandler}/>
-                                <textarea placeholder={"Your message"} value={message} className={style.messageForm}
+                                {yourNameError
+                                    ? <input placeholder={"Enter correct name!"} className={style.nameFormError}
+                                             onBlur={onBlurNameHandler}/>
+                                    : <input placeholder={"Enter your name..."} value={yourName} id={"name"}
+                                             className={style.nameForm} onChange={onChangeNameHandler} onBlur={onBlurNameHandler} />}
+                                <input name="email" placeholder={"Enter your email..."} value={email}
+                                       className={style.emailForm} onChange={onChangeEmailHandler}/>
+                                <textarea placeholder={"Enter your message..."} value={message}
+                                          className={style.messageForm}
                                           onChange={onChangeMessageHandler}>{message}</textarea>
                             </form>
                             {send
                                 ? <div className={style.message}>{send}</div>
-                                : <button className={style.button} onClick={onClickSendHandler}>Send</button>}
+                                : <button className={style.button} type="submit"
+                                          onClick={onClickSendHandler} disabled={yourNameError || emailError || messageError || disabled}>Send</button>}
                         </div>}
                 </div>
             </Fade>
