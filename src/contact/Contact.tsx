@@ -1,4 +1,4 @@
-import React, {ChangeEvent, useEffect, useState, FocusEvent} from 'react';
+import React, {ChangeEvent, useEffect, useState} from 'react';
 import style from "./Contacts.module.scss";
 import styleContainer from "../common/styles/Container.module.scss";
 import {Title} from "../common/components/title/Title";
@@ -37,7 +37,7 @@ export const Contact = () => {
 
     const onChangeNameHandler = (e: ChangeEvent<HTMLInputElement>) => {
         setYourName(e.currentTarget.value)
-        if (e.currentTarget.value.length < 2) {
+        if (!e.currentTarget.value.length) {
             setYourNameError(true)
             setDisabled(true)
         } else {
@@ -45,24 +45,31 @@ export const Contact = () => {
             setDisabled(false)
         }
     }
-
-    const onBlurNameHandler = (e: FocusEvent<HTMLInputElement>) => {
-        if (!e.currentTarget.value.length || e.currentTarget.value.length < 2) {
-            setYourNameError(true)
-            setDisabled(true)
-        } else {
-            setYourName(e.currentTarget.value)
-            setYourNameError(false)
-            setDisabled(false)
-        }
-    }
-
 
     const onChangeEmailHandler = (e: ChangeEvent<HTMLInputElement>) => {
         setEmail(e.currentTarget.value)
-    }
+        if (String(e.currentTarget.value)
+            .toLowerCase()
+            .match(
+                /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            )) {
+            setEmailError(false)
+            setDisabled(false)
+        } else {
+            setEmailError(true)
+            setDisabled(true)
+        }
+    };
+
     const onChangeMessageHandler = (e: ChangeEvent<HTMLTextAreaElement>) => {
         setMessage(e.currentTarget.value)
+        if (e.currentTarget.value.length < 2) {
+            setMessageError(true)
+            setDisabled(true)
+        } else {
+            setMessageError(false)
+            setDisabled(false)
+        }
     }
 
 
@@ -97,20 +104,36 @@ export const Contact = () => {
                         : <div className={style.addForm}>
                             <form className={style.form} id={"contact-form"}>
                                 {yourNameError
-                                    ? <input placeholder={"Enter correct name!"} className={style.nameFormError}
-                                             onBlur={onBlurNameHandler}/>
-                                    : <input placeholder={"Enter your name..."} value={yourName} id={"name"}
-                                             className={style.nameForm} onChange={onChangeNameHandler} onBlur={onBlurNameHandler} />}
-                                <input name="email" placeholder={"Enter your email..."} value={email}
-                                       className={style.emailForm} onChange={onChangeEmailHandler}/>
-                                <textarea placeholder={"Enter your message..."} value={message}
-                                          className={style.messageForm}
-                                          onChange={onChangeMessageHandler}>{message}</textarea>
+                                    ? <input type={"text"} required placeholder={"Enter correct name!"} value={yourName}
+                                             className={style.nameFormError} onChange={onChangeNameHandler}
+                                    />
+                                    : <input type={"text"} required placeholder={"Enter your name..."} value={yourName}
+                                             className={style.nameForm} onChange={onChangeNameHandler}
+                                    />
+                                }
+                                {emailError
+                                    ? <input placeholder={"Enter correct email!"} className={style.emailFormError}
+                                             onChange={onChangeEmailHandler}
+                                    />
+                                    : <input name="email" placeholder={"Enter your email..."} value={email}
+                                             className={style.emailForm} onChange={onChangeEmailHandler}
+                                    />
+                                }
+                                {messageError
+                                    ? <textarea placeholder={"Your message is too short!"} value={message}
+                                                className={style.messageFormError}
+                                                onChange={onChangeMessageHandler}>{message}</textarea>
+
+                                    : <textarea placeholder={"Enter your message..."} value={message}
+                                                className={style.messageForm}
+                                                onChange={onChangeMessageHandler}>{message}</textarea>
+                                }
                             </form>
                             {send
                                 ? <div className={style.message}>{send}</div>
-                                : <button className={disabled ? style.buttonDisabled : style.button } type="submit"
-                                          onClick={onClickSendHandler} disabled={yourNameError || emailError || messageError || disabled}>Send</button>}
+                                : <button className={disabled ? style.buttonDisabled : style.button} type="submit"
+                                          onClick={onClickSendHandler}
+                                          disabled={yourNameError || emailError || messageError || disabled}>Send</button>}
                         </div>}
                 </div>
             </Fade>
