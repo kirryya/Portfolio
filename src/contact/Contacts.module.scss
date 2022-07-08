@@ -123,6 +123,11 @@
           color: $textColor
         }
       }
+      .buttonDisabled {
+        margin: 0 90px 40px;
+        @include button(100px, 30px, ('DM Sans', sans-serif), 14px);
+        cursor: pointer;
+      }
     }
     .messageSending {
       display: flex;

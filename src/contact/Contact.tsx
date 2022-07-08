@@ -39,6 +39,7 @@ export const Contact = () => {
         setYourName(e.currentTarget.value)
         if (e.currentTarget.value.length < 2) {
             setYourNameError(true)
+            setDisabled(true)
         } else {
             setYourNameError(false)
             setDisabled(false)
@@ -48,6 +49,7 @@ export const Contact = () => {
     const onBlurNameHandler = (e: FocusEvent<HTMLInputElement>) => {
         if (!e.currentTarget.value.length || e.currentTarget.value.length < 2) {
             setYourNameError(true)
+            setDisabled(true)
         } else {
             setYourName(e.currentTarget.value)
             setYourNameError(false)
@@ -107,7 +109,7 @@ export const Contact = () => {
                             </form>
                             {send
                                 ? <div className={style.message}>{send}</div>
-                                : <button className={style.button} type="submit"
+                                : <button className={disabled ? style.buttonDisabled : style.button } type="submit"
                                           onClick={onClickSendHandler} disabled={yourNameError || emailError || messageError || disabled}>Send</button>}
                         </div>}
                 </div>
