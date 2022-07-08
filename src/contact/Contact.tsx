@@ -82,15 +82,17 @@ export const Contact = () => {
         }
         formAPI.sendMessage(dataForm)
             .then(() => {
-                setLoading(false)
                 setSend("Message send")
                 setYourName("")
                 setMessage("")
                 setEmail("")
+                setDisabled(true)
             })
             .catch(() => {
-                setLoading(false)
                 setSend("Message NOT SEND")
+            })
+            .finally(() => {
+                setLoading(false)
             })
     }
 
