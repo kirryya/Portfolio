@@ -22,6 +22,12 @@
   @media screen and (max-height: 456px) {
     height: 80vh;
   }
+  @media screen and (max-height: 398px) {
+    height: 90vh;
+  }
+  @media screen and (max-height: 354px) {
+    height: 100vh;
+  }
   background-color: $bgThirdColor;
   @include fontImage;
 

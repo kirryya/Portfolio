@@ -4,6 +4,7 @@ import styleContainer from "../common/styles/Container.module.scss";
 import {Title} from "../common/components/title/Title";
 import fontImage from "../assets/image/font_main.jpg";
 import {dataFormType, formAPI} from "../api/api";
+import {ContactForm} from "./contactForm/ContactForm";
 
 export const Contact = () => {
 
@@ -13,15 +14,15 @@ export const Contact = () => {
 
     const Fade = require("react-reveal/Fade");
 
+    const [send, setSend] = useState<string | null>(null)
+    const [loading, setLoading] = useState<boolean>(false)
+    const [disabled, setDisabled] = useState<boolean>(true)
     const [yourName, setYourName] = useState<string>("")
     const [email, setEmail] = useState<string>("")
     const [message, setMessage] = useState<string>("")
-    const [send, setSend] = useState<string | null>(null)
-    const [loading, setLoading] = useState<boolean>(false)
     const [yourNameError, setYourNameError] = useState<boolean>(false)
     const [emailError, setEmailError] = useState<boolean>(false)
     const [messageError, setMessageError] = useState<boolean>(false)
-    const [disabled, setDisabled] = useState<boolean>(true)
 
 
     useEffect(() => {
@@ -72,7 +73,6 @@ export const Contact = () => {
         }
     }
 
-
     const onClickSendHandler = () => {
         setLoading(true)
         const dataForm: dataFormType = {
@@ -105,31 +105,17 @@ export const Contact = () => {
                         ? <div className={style.messageSending}>SENDING...</div>
                         : <div className={style.addForm}>
                             <form className={style.form} id={"contact-form"}>
-                                {yourNameError
-                                    ? <input type={"text"} required placeholder={"Enter correct name!"} value={yourName}
-                                             className={style.nameFormError} onChange={onChangeNameHandler}
-                                    />
-                                    : <input type={"text"} required placeholder={"Enter your name..."} value={yourName}
-                                             className={style.nameForm} onChange={onChangeNameHandler}
-                                    />
-                                }
-                                {emailError
-                                    ? <input placeholder={"Enter correct email!"} className={style.emailFormError}
-                                             onChange={onChangeEmailHandler}
-                                    />
-                                    : <input name="email" placeholder={"Enter your email..."} value={email}
-                                             className={style.emailForm} onChange={onChangeEmailHandler}
-                                    />
-                                }
-                                {messageError
-                                    ? <textarea placeholder={"Your message is too short!"} value={message}
-                                                className={style.messageFormError}
-                                                onChange={onChangeMessageHandler}>{message}</textarea>
-
-                                    : <textarea placeholder={"Enter your message..."} value={message}
-                                                className={style.messageForm}
-                                                onChange={onChangeMessageHandler}>{message}</textarea>
-                                }
+                                <ContactForm
+                                    onChangeNameHandler={onChangeNameHandler}
+                                    onChangeEmailHandler={onChangeEmailHandler}
+                                    onChangeMessageHandler={onChangeMessageHandler}
+                                    yourNameError={yourNameError}
+                                    emailError={emailError}
+                                    messageError={messageError}
+                                    message={message}
+                                    email={email}
+                                    yourName={yourName}
+                                />
                             </form>
                             {send
                                 ? <div className={style.message}>{send}</div>
