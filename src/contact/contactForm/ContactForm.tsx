@@ -26,8 +26,8 @@ export const ContactForm = (props: ContactFormPropsType) => {
                 />
             }
             {props.emailError
-                ? <input placeholder={"Enter correct email!"} className={style.emailFormError}
-                         onChange={props.onChangeEmailHandler}
+                ? <input placeholder={"Enter correct email!"} value={props.email}
+                         className={style.emailFormError} onChange={props.onChangeEmailHandler}
                 />
                 : <input name="email" placeholder={"Enter your email..."} value={props.email}
                          className={style.emailForm} onChange={props.onChangeEmailHandler}

@@ -37,11 +37,13 @@ export const Contact = () => {
     }, [send])
 
     const onChangeNameHandler = (e: ChangeEvent<HTMLInputElement>) => {
-        setYourName(e.currentTarget.value)
-        if (!e.currentTarget.value.length) {
+        const value = e.currentTarget.value
+        setYourName(value)
+        if (!value.length) {
             setYourNameError(true)
             setDisabled(true)
         } else {
+            setYourName(value)
             setYourNameError(false)
             setDisabled(false)
         }
@@ -54,6 +56,7 @@ export const Contact = () => {
             .match(
                 /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
             )) {
+            setEmail(e.currentTarget.value)
             setEmailError(false)
             setDisabled(false)
         } else {
@@ -63,11 +66,13 @@ export const Contact = () => {
     };
 
     const onChangeMessageHandler = (e: ChangeEvent<HTMLTextAreaElement>) => {
-        setMessage(e.currentTarget.value)
-        if (e.currentTarget.value.length < 2) {
+        const value = e.currentTarget.value
+        setMessage(value)
+        if (value.length < 2) {
             setMessageError(true)
             setDisabled(true)
         } else {
+            setMessage(value)
             setMessageError(false)
             setDisabled(false)
         }

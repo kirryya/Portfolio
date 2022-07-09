@@ -59,6 +59,10 @@
       height: 240px;
       width: 200px;
     }
+    @media screen and (max-height: 390px) {
+      height: 150px;
+      width: 100px;
+    }
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
