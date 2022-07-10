@@ -30,7 +30,7 @@ export const Projects = () => {
             title: "Social Network",
             description: "SPA for social actions - messaging and blogging. Implemented: login page with validation, error displaying and captcha; 404 page; profile page with abilities to: view the information of the selected user, edit your profile information, change avatar, add a new post and view your published posts; dialogs page with the ability to send a message; users page and friends page with abilities to: view the list of users using pagination, subscribe and unsubscribe to any user, view any user profile.",
             style: social,
-            link: "https://github.com/kirryya/Social-Network"
+            link: "https://kirryya.github.io/Social-Network"
         },
         {
             title: "Learning Cards",
