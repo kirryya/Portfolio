@@ -24,7 +24,7 @@ export const Projects = () => {
             title: "Todolist",
             description: "SPA for task management. Implemented: add task or task list, remove task or task list, rename task or task list, marking the completed task",
             style: todolist,
-            link: "https://kirryya.github.io/ToDoList"
+            link: "https://kirryya.github.io/ToDoList/"
         },
         {
             title: "Social Network",
@@ -36,7 +36,7 @@ export const Projects = () => {
             title: "Learning Cards",
             description: "SPA for learning by cards. It's team project. Implemented: login page with validation; register page with validation; reset password page with validation; 404 page; profile page with abilities to: edit your profile information (change nickname), add a new card pack and edit, search, sort, view, remove and learn your card packs; packs list page with abilities to: sort, view and learn any card packs; learn page with abilities to answer a question and evaluate your answer.",
             style: cards,
-            link: "https://mr-Freeman-S.github.io/cards-nya"
+            link: "https://mr-Freeman-S.github.io/cards-nya/"
         }
     ]
 
