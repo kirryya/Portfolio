@@ -25,7 +25,7 @@ export const Main = () => {
                         <span>Hi There</span>
                         <h1>I am Andrei Kirylchyk</h1>
                         <ReactTypingEffect text="Front-End Developer"/>
-                        <p><span className={style.description}>I'm a result oriented front-end developer with experience in creating SPA, using React(JS/TS), Redux, HTML & CSS. Now I am improving my skills in this direction and expanding them with new technologies. And also I have interest to learn React Native</span></p>
+                        <p><span className={style.description}>I'm a result oriented front-end developer with experience in creating Landing Pages and SPA, using React(JS/TS), Redux, HTML & CSS. Now I am improving my skills in this direction and expanding them with new technologies. And also I have interest to learn React Native</span></p>
                     </div>
                 </Fade>
                 <Fade right>
