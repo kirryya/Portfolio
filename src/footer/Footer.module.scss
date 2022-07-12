@@ -21,6 +21,9 @@
   @media screen and (max-height: 354px) {
     height: 40vh;
   }
+  @media screen and (max-height: 298px) {
+    height: 50vh;
+  }
 
   .footersContainer {
     @include text(('DM Sans', sans-serif), 1.2, 400, 16px);
