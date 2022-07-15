@@ -3,39 +3,9 @@
 
 
 .contactsBlock {
-  height: 50vh;
+  min-height: 50vh;
   @media screen and (min-width: 1700px) {
     height: 40vh;
-  }
-  @media screen and (max-height: 637px) {
-    height: 52vh;
-  }
-  @media screen and (max-height: 612px) {
-    height: 55vh;
-  }
-  @media screen and (max-height: 580px) {
-    height: 60vh;
-  }
-  @media screen and (max-height: 531px) {
-    height: 70vh;
-  }
-  @media screen and (max-height: 456px) {
-    height: 80vh;
-  }
-  @media screen and (max-height: 398px) {
-    height: 90vh;
-  }
-  @media screen and (max-height: 354px) {
-    height: 100vh;
-  }
-  @media screen and (max-height: 319px) {
-    height: 110vh;
-  }
-  @media screen and (max-height: 290px) {
-    height: 120vh;
-  }
-  @media screen and (max-height: 266px) {
-    height: 130vh;
   }
   background-color: $bgThirdColor;
   @include fontImage;
@@ -84,6 +54,7 @@
         .emailForm {
           border-radius: 10px;
           height: 19px;
+          width: 280px;
           background-color: $bgColor;
           border-color: $textColor;
           color: $textColor;
@@ -95,6 +66,7 @@
         .emailFormError {
           border-radius: 10px;
           height: 19px;
+          width: 280px;
           background-color: rgba(218, 113, 116, 0.78);
           border-color: rgba(217, 48, 164, 0.9);
           color: $bgColor;
@@ -107,6 +79,7 @@
         .messageForm {
           border-radius: 10px;
           height: 38px;
+          width: 280px;
           background-color: $bgColor;
           border-color: $textColor;
           color: $textColor;
