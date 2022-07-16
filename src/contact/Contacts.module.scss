@@ -5,7 +5,7 @@
 .contactsBlock {
   min-height: 50vh;
   @media screen and (min-width: 1700px) {
-    height: 40vh;
+    min-height: 40vh;
   }
   background-color: $bgThirdColor;
   @include fontImage;
