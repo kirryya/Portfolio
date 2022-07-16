@@ -1,0 +1,88 @@
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
+
+.form {
+  width: 270px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+
+  .nameForm {
+    border-radius: 10px;
+    height: 20px;
+    width: 270px;
+    background-color: $bgColor;
+    border-color: $textColor;
+    color: $textColor;
+    outline: 0;
+    border-width: 1.5px;
+  }
+
+  .nameFormError {
+    border-radius: 10px;
+    height: 20px;
+    width: 280px;
+    background-color: rgba(218, 113, 116, 0.78);
+    border-color: rgba(217, 48, 164, 0.9);
+    color: $bgColor;
+    outline: 0;
+    border-width: 1.5px;
+  }
+
+  .emailForm {
+    border-radius: 10px;
+    height: 20px;
+    width: 270px;
+    background-color: $bgColor;
+    border-color: $textColor;
+    color: $textColor;
+    outline: none;
+    border-width: 1.5px;
+  }
+
+  .emailFormError {
+    border-radius: 10px;
+    height: 20px;
+    width: 270px;
+    background-color: rgba(218, 113, 116, 0.78);
+    border-color: rgba(217, 48, 164, 0.9);
+    color: $bgColor;
+    outline: none;
+    border-width: 1.5px;
+  }
+
+  .messageForm {
+    border-radius: 10px;
+    height: 30px;
+    width: 270px;
+    background-color: $bgColor;
+    border-color: $textColor;
+    color: $textColor;
+    outline: 0;
+    border-width: 1.5px;
+  }
+
+  .messageFormError {
+    border-radius: 10px;
+    height: 30px;
+    width: 270px;
+    background-color: rgba(218, 113, 116, 0.78);
+    border-color: rgba(217, 48, 164, 0.9);
+    color: $bgColor;
+    outline: 0;
+    border-width: 1.5px;
+  }
+}
+
+
+
+
+
+
+
+
+
+

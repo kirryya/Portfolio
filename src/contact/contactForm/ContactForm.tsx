@@ -1,5 +1,5 @@
 import React, {ChangeEvent} from 'react';
-import style from "../Contacts.module.scss";
+import style from "./ContactForm.module.scss";
 
 type ContactFormPropsType = {
     onChangeNameHandler: (e: ChangeEvent<HTMLInputElement>) => void

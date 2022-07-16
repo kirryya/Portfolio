@@ -109,7 +109,7 @@ export const Contact = () => {
                     {loading
                         ? <div className={style.messageSending}>SENDING...</div>
                         : <div className={style.addForm}>
-                            <form className={style.form} id={"contact-form"}>
+                            <form id={"contact-form"}>
                                 <ContactForm
                                     onChangeNameHandler={onChangeNameHandler}
                                     onChangeEmailHandler={onChangeEmailHandler}
