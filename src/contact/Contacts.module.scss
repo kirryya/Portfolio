@@ -23,7 +23,7 @@
       box-sizing: border-box;
 
       .form {
-        width: 100%;
+        width: 280px;
         height: 100px;
         display: flex;
         flex-direction: column;
@@ -34,6 +34,7 @@
         .nameForm {
           border-radius: 10px;
           height: 19px;
+          width: 280px;
           background-color: $bgColor;
           border-color: $textColor;
           color: $textColor;
@@ -44,6 +45,7 @@
         .nameFormError {
           border-radius: 10px;
           height: 19px;
+          width: 280px;
           background-color: rgba(218, 113, 116, 0.78);
           border-color: rgba(217, 48, 164, 0.9);
           color: $bgColor;
@@ -90,6 +92,7 @@
         .messageFormError {
           border-radius: 10px;
           height: 38px;
+          width: 280px;
           background-color: rgba(218, 113, 116, 0.78);
           border-color: rgba(217, 48, 164, 0.9);
           color: $bgColor;
