@@ -7,7 +7,6 @@ const instance = axios.create({
 export const formAPI = {
     sendMessage(dataForm: dataFormType) {
         return instance.post("sendMessage", dataForm);
-
     },
 };
 
