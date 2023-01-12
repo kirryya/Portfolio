@@ -17,7 +17,7 @@ export const Links = () => {
             <img className={style.image} src={github} alt={"github"}
                  onClick={() => onClickHandler("https://github.com/kirryya")}/>
             <img className={style.image} src={linkedin} alt={"linkedin"}
-                 onClick={() => onClickHandler("https://www.linkedin.com/in/andrei-kirylchyk-313176239")}/>
+                 onClick={() => onClickHandler("https://www.linkedin.com/in/andrei-kirylchyk")}/>
         </div>
     );
 };
